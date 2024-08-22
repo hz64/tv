@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <title>ZE TV</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./1.css">
+  <script src="./1.js"></script>
+  <script src="./2.js"></script>
+
+  <style>
+    div.gallery {
+      margin: 5px;
+      border: 1px solid #ccc;
+      float: left;
+      width: 180px;
+    }
+    
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+    
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+    
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+    </style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="./index.html">ZE TV</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">主页</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Page 1-1</a></li>
+          <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li>
+        </ul>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+  <h2 align="center">头文字D 第一季<br>在线观看 第7集</h2>
+  <div id="dplayer"></div>
+  <script src="./vd.js"></script>
+  <script src="./vd2.js"></script>
+  <script>
+    var dp = new DPlayer({
+      container: document.getElementById('dplayer'),
+    video: {
+        url: 'https://api.heimuer.app/play/7380fdd85d5c48c5ac477f99e2c86b23.m3u8',
+    },
+});
+  </script>
+</div>
+
+</body>
+</html>
+
